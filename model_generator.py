@@ -132,7 +132,7 @@ class GeneTransformer:
         elif return_scores:
             return outputs, scores.tolist()
         else:
-            return outputs
+            return outputs, end_indices
 
     def decode_beam_batch(self, bodies, beam_size=3, max_output_length=100, sample=False):
         if self.mode != 'eval':
